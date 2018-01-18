@@ -24,11 +24,12 @@ interface IntersectionInfo {
   isCenterClosest: boolean
   isBottomClosest: boolean
   boundingClientRect: ClientRect
+  target: Element
 }
 
 interface IntersectionEvent {
-  byY: Array<IntersectionInfo>
-  byCenter: Array<IntersectionInfo>
+  byY: IntersectionInfo[]
+  byCenter: IntersectionInfo[]
   byName: {
     [id: string]: IntersectionInfo
   }
