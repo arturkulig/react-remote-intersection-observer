@@ -1,20 +1,20 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-interface SectionProps {
+export interface SectionProps {
   name: string
   children: React.ReactElement<any>
 }
 
-interface RemoteObserverProps {
+export interface RemoteObserverProps {
   children: (event: IntersectionEvent) => React.ReactNode
 }
 
-interface RemoteObserverState {
+export interface RemoteObserverState {
   event: IntersectionEvent
 }
 
-interface IntersectionInfo {
+export interface IntersectionInfo {
   name: string
   visibility: number
   top: number
@@ -27,7 +27,7 @@ interface IntersectionInfo {
   target: Element
 }
 
-interface IntersectionEvent {
+export interface IntersectionEvent {
   byY: IntersectionInfo[]
   byCenter: IntersectionInfo[]
   byName: {
